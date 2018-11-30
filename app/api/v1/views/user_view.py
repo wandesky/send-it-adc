@@ -3,6 +3,6 @@ from app.api.v1.models.user_model import User
 
 users = Blueprint('users', __name__)
 
-users.route('/')
+@users.route('/')
 def hello():
-    return "Testing the app"
+    return "Testing the app from users"

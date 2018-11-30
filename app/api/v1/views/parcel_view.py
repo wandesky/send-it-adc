@@ -5,4 +5,4 @@ parcels = Blueprint('parcels', __name__)
 
 @parcels.route('/')
 def hello():
-    return "Testing the app"
+    return "Testing the app from parcels"
