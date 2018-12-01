@@ -15,7 +15,14 @@ class TestParcel(unittest.TestCase):
             data=json.dumps(
                 dict(
                     placedBy = "wafula",
-                    weight = "2kg"
+                    weight = "2kg",
+                    weightmetric = "dummyweightmetric",
+                    sentOn = "dummysentOn",
+                    deliveredOn = "dummydeliveredOn",
+                    status = "dummystatus",
+                    parcel_from = "dummyparcel_from",
+                    parcel_to = "dummyparcel_to",
+                    currentlocation = "dummycurrentlocation"
                 )
             ), content_type='application/json'
         )
