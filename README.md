@@ -1,5 +1,6 @@
 # Send It
 [![Build Status](https://travis-ci.com/wandesky/send-it-adc.svg?branch=pipeline)](https://travis-ci.com/wandesky/send-it-adc)
+[![Coverage Status](https://coveralls.io/repos/github/wandesky/send-it-adc/badge.svg)](https://coveralls.io/github/wandesky/send-it-adc)
 ### The app
 SendIT is a courier service that helps users deliver parcels to different destinations.   
 This repository holds [@wandesky's](https://github.com/wandesky) submission of for Andela's Developer Challenge.  
