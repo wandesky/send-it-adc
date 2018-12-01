@@ -5,7 +5,7 @@ parcels = Blueprint('parcels', __name__)
 
 @parcels.route('/', methods=['GET'])
 def get_parcels():
-    return "Testing the app from parcels"
+    return jsonify(Parcel.get_all_parcels())
 
 @parcels.route('/', methods=['POST'])
 def post_parcel():
