@@ -11,9 +11,17 @@ def get_parcels():
 def post_parcel():
     req_data = request.get_json()
     # parcel_id = req_data['id'] the id will be dynamically generated
-    parcel_placedBy = req_data['placedBy']
-    parcel_weight = req_data['weight']
-    parcel = Parcel(parcel_placedBy, parcel_weight)
+    placedBy = req_data['placedBy']
+    weight = req_data['weight']
+    weightmetric = req_data["weightmetric"]
+    sentOn = req_data["sentOn"]
+    deliveredOn = req_data["deliveredOn"]
+    status = req_data["status"]
+    parcel_from = req_data["parcel_from"]
+    parcel_to = req_data["parcel_to"]
+    currentlocation = req_data["currentlocation"]
+
+    parcel = Parcel(placedBy, weight, weightmetric, sentOn, deliveredOn, status, parcel_from, parcel_to, currentlocation)
 
     response = parcel.post_parcel()
     return response, 201
