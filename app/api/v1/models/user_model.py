@@ -11,11 +11,11 @@ class User(object):
         self.username = username
         self.registered = registered
         self.isAdmin = isAdmin
-
+        
     def get_all_users(self = None):
         return User.users
 
-    def post_parcel(self):
+    def post_user(self):
         User.users.append(
             {
                 "id":len(User.users),
