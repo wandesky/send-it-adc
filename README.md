@@ -13,7 +13,7 @@ An interesting branch by the name [pipeline](https://github.com/wandesky/send-it
 To clone the repo, run `git clone https://github.com/wandesky/send-it-adc.git`  
 Then switch to the develop branch to access the latest _working_ changes. You can do this using `git checkout develop`  
 ### Front end
-A copy of the front end site can be accessed from `github pages`  
+A copy of the front end site can be accessed from `https://wandesky.github.io/send-it-adc/`  
 ### API
 The API is hosted on [Heroku](https://send-it-adc-production.herokuapp.com/) and docummented using [Postman](https://documenter.getpostman.com/view/4624230/RzfdrB9J) and [Apiary](senditadc.docs.apiary.io).  
 ### Project Management
