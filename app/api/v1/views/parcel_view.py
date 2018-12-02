@@ -7,6 +7,11 @@ parcels = Blueprint('parcels', __name__)
 def get_parcels():
     return jsonify(Parcel.get_all_parcels())
 
+@parcels.route('/<int:parcel_id>', methods=['GET'])
+def get_parcel(parcel_id):
+    # parcel = Parcel()
+    return jsonify(Parcel.get_specific_parcel(None, parcel_id))
+
 @parcels.route('/', methods=['POST'])
 def post_parcel():
     req_data = request.get_json()
