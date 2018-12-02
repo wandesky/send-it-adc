@@ -1,11 +1,18 @@
 from flask import Flask, Blueprint, jsonify, request
 from app.api.v1.models.user_model import User
+from app.api.v1.models.parcel_model import Parcel
 
 users = Blueprint('users', __name__)
 
 @users.route('/', methods=['GET'])
 def get_users():
     return jsonify(User.get_all_users())
+
+'''View function to retrieve all orders placed by specific user'''
+@users.route('/<int:user_id>/parcels', methods=['GET'])
+def get_orders_by_specific_user(user_id):
+    orders = Parcel.get_orders_by_specific_user(None, user_id)
+    return jsonify(orders), 200
 
 @users.route('/', methods=['POST'])
 def post_user():

@@ -8,6 +8,11 @@ class TestUser(unittest.TestCase):
         self.response = app.test_client().get('/api/v1/users/')
         self.assertEqual(self.response.status_code, 200)
 
+    '''Tests fetching of all delivery orders made by specific user'''
+    def test_get_all_orders_by_specific_user(self):
+        self.response = app.test_client().get('/api/v1/users/0/parcels')
+        self.assertEqual(self.response.status_code, 200)
+
     '''Test creation of a parcel deliver order'''
     def test_post_user(self):
         self.response = app.test_client().post(

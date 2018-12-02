@@ -3,8 +3,21 @@ class Parcel(object):
         {
             # Dummy parcel data
             "parcel_id": 0,
-            "placedBy": "wafula",
+            "placedBy": 0,
             "weight": "2kg",
+            "weightmetric": "dummyweightmetric",
+            "sentOn": "dummysentOn",
+            "deliveredOn": "dummydeliveredOn",
+            "status": "dummystatus",
+            "parcel_from": "dummyparcel_from",
+            "parcel_to": "dummyparcel_to",
+            "currentlocation": "dummycurrentlocation"
+        },
+        {
+            # Dummy parcel data
+            "parcel_id": 0,
+            "placedBy": 0,
+            "weight": "4kg",
             "weightmetric": "dummyweightmetric",
             "sentOn": "dummysentOn",
             "deliveredOn": "dummydeliveredOn",
@@ -34,6 +47,15 @@ class Parcel(object):
     def get_specific_parcel(self = None, parcel_id = None):
         return Parcel.parcels[parcel_id]
 
+    def get_orders_by_specific_user(self = None, user_id = None):
+        orders = []
+        for item in Parcel.parcels:
+            if item["placedBy"] == user_id:
+                orders.append(item)
+        # orders.append(next((item for item in Parcel.parcels if item["placedBy"] == user_id), None))
+        # the above line could have been cool, but again it only captures the first positive dictionary
+        return orders
+
     def post_parcel(self):
         Parcel.parcels.append(
             {
@@ -47,7 +69,6 @@ class Parcel(object):
                 "parcel_from": self.parcel_from,
                 "parcel_to": self.parcel_to,
                 "currentlocation": self.currentlocation
-
             }
         )
         return "success"
