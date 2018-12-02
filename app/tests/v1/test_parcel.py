@@ -8,6 +8,11 @@ class TestParcel(unittest.TestCase):
         self.response = app.test_client().get('/api/v1/parcels/')
         self.assertEqual(self.response.status_code, 200)
 
+    '''Tests fetching of a specific parcel delivery order'''
+    def test_get_parcel(self):
+        self.response = app.test_client().get('/api/v1/parcels/0')
+        self.assertEqual(self.response.status_code, 200)
+
     '''Test creation of a parcel deliver order'''
     def test_post_parcel(self):
         self.response = app.test_client().post(

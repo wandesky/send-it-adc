@@ -1,5 +1,19 @@
 class Parcel(object):
-    parcels = []
+    parcels = [
+        {
+            # Dummy parcel data
+            "parcel_id": 0,
+            "placedBy": "wafula",
+            "weight": "2kg",
+            "weightmetric": "dummyweightmetric",
+            "sentOn": "dummysentOn",
+            "deliveredOn": "dummydeliveredOn",
+            "status": "dummystatus",
+            "parcel_from": "dummyparcel_from",
+            "parcel_to": "dummyparcel_to",
+            "currentlocation": "dummycurrentlocation"
+        }
+    ]
 
     def __init__(self, placedBy, weight, weightmetric, sentOn, deliveredOn, status, parcel_from, parcel_to, currentlocation):
         self.parcel_id = len(Parcel.parcels)
@@ -16,6 +30,9 @@ class Parcel(object):
 
     def get_all_parcels(self = None):
         return Parcel.parcels
+
+    def get_specific_parcel(self = None, parcel_id = None):
+        return Parcel.parcels[parcel_id]
 
     def post_parcel(self):
         Parcel.parcels.append(
