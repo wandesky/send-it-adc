@@ -15,6 +15,6 @@ Then switch to the develop branch to access the latest _working_ changes. You ca
 ### Front end
 A copy of the front end site can be accessed from `github pages`  
 ### API
-The API is hosted on [heroku](https://send-it-adc-production.herokuapp.com/) and docummented using [Postman](postman.com) and [Apiary](apiary.com).  
+The API is hosted on [Heroku](https://send-it-adc-production.herokuapp.com/) and docummented using [Postman](https://documenter.getpostman.com/view/4624230/RzfdrB9J) and [Apiary](senditadc.docs.apiary.io).  
 ### Project Management
 [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2224104) was used in management of this project.
