@@ -15,6 +15,6 @@ Then switch to the develop branch to access the latest _working_ changes. You ca
 ### Front end
 A copy of the front end site can be accessed from `https://wandesky.github.io/send-it-adc/`  
 ### API
-The API is hosted on [Heroku](https://send-it-adc-production.herokuapp.com/) and docummented using [Postman](https://documenter.getpostman.com/view/4624230/RzfdrB9J) and [Apiary](senditadc.docs.apiary.io).  
+The API is hosted on [Heroku](https://send-it-adc-production.herokuapp.com/) and docummented using [Postman](https://documenter.getpostman.com/view/4624230/RzfdrB9J) and [Apiary](https://senditadc.docs.apiary.io/#)   
 ### Project Management
 [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2224104) was used in management of this project.
